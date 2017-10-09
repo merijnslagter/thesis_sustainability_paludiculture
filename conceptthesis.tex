@@ -215,7 +215,7 @@ The goal of this study is to give insight in the (spatial) opportunities of palu
 \begin{enumerate}
 \item \label{rqsub:peatmineral} {Where and how much peat mineralization is taking place in the Netherlands?}
 \item \label{rqsub:catchpeat} {What catchments can be used best to be completely rewetted?}
-\item \label{rqsub:catchheigth} {Does rewetting lower parts of catchment help to reduce peat mineralization?}
+\item \label{rqsub:catchheigth} {Does rewetting lower parts of a catchment help to reduce peat mineralization?}
 \end{enumerate}
 \label{rq:sust}\item{Which economic, ecological, social and cultural opportunities and bottlenecks need to be accounted for when implementing paludiculture in the Netherlands?}
 \end{enumerate}
@@ -226,36 +226,22 @@ In order to answer the research questions, literature studies, several spatial a
 
 \section{Study area}
 
+%Map of Dutch peat soils
 This thesis focused on paludiculture in (organic) peat soils in the Netherlands. 
 
-% soil types
-% ahn
-% peat oxidation indices
-% catchment borders
-% water quality
-% province borders
-% land use
-% pot: meadow birds
-% nature areas
-
 \section{Data}
-
 \subsection{Spatial data}
-
 \subsubsection{Data availability}
-
-Table .. shows the sources of the spatial data I used.
+For this thesis, data was partially obtained as free open source data from the web. Other data was provided for by Dutch Waterschappen and Wageningen Environmental Research. Table \ref{tab:spatialdatasources} shows the sources and years of creation of the spatial data I used. 
 
 \subsubsection{Data processing mechanisms}
 For this thesis, the open source programming language R and the open source programs \ac{QGIS} and RKWard were used. RKWard makes use of R and was in this thesis used for all the data processing. \ac{QGIS} was used to derive the visualization products.
 
 \subsubsection{Data preparation}
+%File formats
+The different data sets were provided in different formats and were not always directly suitable for the intended usage. For spatial vector data ESRI Shapefiles (from now on called shapefiles), for spatial raster data \ac{GeoTIFF} files and for tabular information \ac{CSV} files were used. These formats are easy in use and can easily be integrated with the used data processing mechanisms (i.e. \ac{QGIS} and R). Some data was provided as geodatabase, and had thus to be converted to shapefile format. In this thesis, many different data sources were integrated. In order for the data to be compatible, the same projection systems had to be used. However, not for all calculations, the same projection systems are suitable. Therefore, for this thesis, two projection systems were used, namely:
 
-The different data sets were provided in different formats and were not always directly suitable for the intended usage. For spatial vector data ESRI Shapefiles (from now on called shapefiles), for spatial raster data \ac{GeoTIFF} files and for tabular information \ac{CSV} files. These formats are easy in use and can easily be integrated with the used data processing mechanisms (i.e. \ac{QGIS} and R).
-
-Some data was provided as geodatabase, and had thus to be converted to shapefile format. In this thesis, many different data sources were integrated. In order for the data to be compatible, the same projection systems had to be used. However, not for all calculations, the same projection systems are suitable. Therefore, for this thesis, two projection systems were used, namely:
-
-
+% Projection system used:
 \begin{itemize}
 \item Amersfoort New: 
 %+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs
@@ -263,34 +249,34 @@ Some data was provided as geodatabase, and had thus to be converted to shapefile
 %+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0
 \end{itemize}
 
-Table .. lists the preparation procedure of the different source files prior to the data analysis. Annex .. shows the r scripts and the detailed description of the data preparation procedure.
+Table \ref{tab:procdataprep} lists the preparation procedure of the different source files prior to the data analysis. Annex \ref{ann:procdataprep} shows the r scripts and the detailed description of the data preparation procedure.
 
 \subsection{Peat mineralization indices}
-
-As part of the answer to research question \ref{rqsub:peatmineral}, information on peat mineralization occurence in the Netherlands was needed. Peat soils differ in their mineralization potential. Therefore, the mineralization potential of different Dutch peat types were determined. Some of these indices  were already produced by \citep{stouthamer2008toelichting}. An overview of these indices can be found in Annex .. These indices were created based on a four criteria: (1) soil type of the layers, (2) depth of the layers, (3) organic matter content in the layers and (4) profile type of the layers. A detailed description can be found in \citep{stouthamer2008toelichting}.
+% Stouthamer indices
+As part of the answer to research question \ref{rqsub:peatmineral}, information on peat mineralization occurence in the Netherlands was needed. Peat soils differ in their mineralization potential. Therefore, mineralization potential indices can be calculated. Some of these indices  were produced by \citep{stouthamer2008toelichting}. An overview of these indices can be found in Annex .. These indices were created based on a four criteria: (1) soil type of the layers, (2) depth of the layers, (3) organic matter content in the layers and (4) profile type of the layers. A detailed description can be found in \citep{stouthamer2008toelichting}. 
 
 \section{Spatial data analysis}
 
 \subsection{Abiotic conditions in the Netherlands}
-
-In order to get an understanding of the abiotic situation in the Netherlands regarding paludiculture plants, all measurements of pH, \ac{N} and \ac{P} in peat areas in the Netherlands were selected. As a result, the number of locations that were suitable for the chosen species could be depected. Moreover, the suitability of Dutch spaces for paludiculture crops could be depicted. In Table .., a workflow is provided. In Annex .., a more detailed approach is mentioned, as well as the r scripts I used to get the analysis done.
+In order to get an understanding of the abiotic situation in the Netherlands regarding paludiculture plants, measurements of pH, \ac{N} and \ac{P} that were done in peat areas in the Netherlands were summarized. As a result, suitable locations for three paludiculture species could be depicted. In Table \ref{tab:workflowabiotic}, a workflow is provided. In Annex \ref{ann:procedureabiotics}, a more detailed approach is provided, as well as the r scripts I used to get the analysis done.
 
 \subsection{Peat mineralization reduction potential in the Netherlands}
 
-\subsubsection{Mineralization potential}
-In Table .., an overview of the workflow to derive mineralization potential maps is shown.
+\subsubsection{Mineralization potential indices of peat soils in the Netherlands}
 
-\citet{stouthamer2008toelichting} calculated potentials for .. peat types. In the Netherlands, .. peat types can be found. I used two approaches to update the mineralization potentials to the residing peat types. First of all, based on the already existing mineralization potentials, I could extrapolate the indices to ... other indices. However, for .. peat types, this could not be done. Therefore, for these peat types, indices were created from scratch, using the method used by \citet{stouthamer2008toelichting}. In Annex .., a description of this method is showed. Finally, for .. of the .. peat types, indices were found, as listed in Annex .. 
+%Deriving mineralization potentials
+In Table \ref{tab:worklowminerpot}, an overview of the workflow to derive mineralization potentials is shown. \citet{stouthamer2008toelichting} calculated potentials for .. peat types. In the Netherlands, .. peat types can be found. I used two approaches to update the mineralization potentials to the residing peat types. First of all, based on the already existing mineralization potentials, I could extrapolate the indices to ... other indices. However, for .. peat types, this could not be done. Therefore, for these peat types, indices were created from scratch, using the method used by \citet{stouthamer2008toelichting}. In Annex .., a description of this method is showed. Finally, for .. of the .. peat types, indices were found, as listed in Annex .. 
 
-In order to summarize the mineralization potentials, the indices were categorized in four groups of mineralization potential: Very low, Low, High and Very high. Table .. shows the ranges on which these categories are based. Subsequently, I calculated the areas of these categories for the whole of the Netherlands and also per province. Annex .. shows the exact procedure I followed to create the maps.
+%Categorize indices
+In order to summarize the mineralization potentials, the indices were categorized in four groups of mineralization potential: Very low, Low, High and Very high. Table \ref{tab:minpotcatranges} shows the ranges on which these categories are based. Subsequently, the areas of these categories per province and for the Netherlands were calculated. Annex .. shows the exact procedure that was followed to do the analysis.
 
-\subsubsection{Catchments in peat}
-First of all, I determined the catchments that are partially or fully covered with peat soil. Secondly, I calculated the percentage of peat soil in each catchment. These numbers were then categorized into four levels of peat presence: Very low, Low, High and Very High. As a result, I could determine per waterschap how much peat was present in their catchments.
+\subsubsection{Catchments that can be used best to be completely rewetted}
 
-An overview of the performed steps is depicted in Table ... A more detailed description can be found in Annex .., as well as the r scripts I used to perform this analysis.
+%Workflow to determine catchments that can be used to be completely rewetted
+To answer Research question \ref{rqsub:catchpeat}: "What catchments can be used best to be completely rewetted?", first of all, the catchments that contain peat soil were determined. Secondly, the proportion of peat soil in each catchment was calculated. The proportion was subsequently categorized into four levels of peat presence: Very low, Low, High and Very High. As a result, per waterschap, the proportional presence of peat in the catchments could be presented. An overview of the performed steps is depicted in Table \ref{tab:workflowcatchmentrewet}. A more detailed description can be found in Annex .., as well as the r scripts that were used to perform this analysis.
 
 \subsubsection{Height differences within catchments}
-For a number of catchments in which peat is present but not abundant, height differences between the peat and the non peat part of the catchment were calculated. An overview of the procedure can be found in Table ... Annex .. shows the detailed process as well as the r scripts that were used to do the analysis.
+Reserach question \ref{rqsub:catchheigth} addresses the question: "Does rewetting lower parts of a catchment help to reduce peat mineralization?". In order to answer this question, the height difference between the peat part and the non peat part of .. catchments was determined. These catchments were selected based on practical reasons. An overview of the procedure can be found in Table \ref{tab:workflowheightdifcatch}. Annex .. shows the detailed process as well as the r scripts that were used to do the analysis.
 
 \subsection{Sustainability issues}
 
@@ -303,15 +289,19 @@ For a number of catchments in which peat is present but not abundant, height dif
 
 \chapter{Peat mineralization reduction by paludiculture}
 
-This chapter addresses the question: "can paludiculture help to reduce peat mineralization in the Netherlands?” As a first step, the concept of paludiculture will be explained and various promising species will be described. Then, a literature study will be presented about the greenhouse gas balance of rewetted and paludiculture plots compared to drained peat soils.
+This chapter addresses the question: "Can paludiculture help to reduce peat mineralization in the Netherlands?” As a first step, the concept of paludiculture will be explained and various promising species will be described. Then, a literature study will be presented about the greenhouse gas balance of rewetted and paludiculture plots compared to drained peat soils.
 
 \section{Promising species of paludiculture}
 
 \subsection{The concept of paludiculture}
+%Paludiculture definition
+Paludiculture stems from the Latin word Palus, which means swamp. The term paludiculture was coined in 2007 and basically describes the productive usage of wetlands while reducing greenhouse gas emissions from peat areas \citep{wichtmann2007paludiculture}. 
 
-Paludiculture stems from the Latin word Palus, which means swamp. The term paludiculture was coined in 2007 and basically describes the productive usage of wetlands while reducing greenhouse gas emissions from peat areas \citep{wichtmann2007paludiculture}. %Paludiculture is practiced since a long time, with cultivation of rice being the prime example. It is estimated that rice constitutes of approximately 20\% of the world's calories intake \citep{wichtmann2007paludiculture}.
+%Number of suitable plant species for paludiculture in the Netherlands
+A typical Dutch paludiculture crop is Common Reed, which is a water plant species used for thatching roofs \citep{wichtmann2016paludiculture}. Only recently, \citet{abel2013database} selected a list of 812 water plants that are globally suitable for cultivation. In their research, 184 plants were found suitable for Western Pomaria in Germany. Since the climate in this region is similar to the Dutch climate, 184 plants can be classified suitable to cultivate in the Netherlands. 
+%Ask Susanne to provide a list
 
-A typical Dutch paludiculture crop is Common Reed, which is a water plant species used for thatching roofs \citep{wichtmann2016paludiculture}. Only recently, \citet{abel2013database} selected a list of 812 water plants that are globally suitable for cultivation. In their research, 184 plants were found suitable for Western Pomaria in Germany. Since the climate in this region is similar to the Dutch climate, 184 plants can be classified suitable to cultivate in the Netherlands. Currently, some paludiculture practices already exist. At least 8 million kilo Common Reed is harvested every year in the Netherlands. Usage is even higher, with at least 20 million kilo a year \citep{wichtmann2016paludiculture}. Also, the island of Terschelling is known to have cranberry plantations. Cattail and peat moss are two other common species in Dutch ecosystems that have been put forward as very promising species to cultivate \citep{abel2013database, van2013werk}. Also, Azolla, which is not native to the Netherlands, is mentioned as a promising species for paludiculture \citep{abel2013database, van2013werk}. These three species will be elaborated on below.
+Currently, some paludiculture practices already exist. At least 8 million kilo Common Reed is harvested every year in the Netherlands. Usage is even higher, with at least 20 million kilo a year \citep{wichtmann2016paludiculture}. Also, the island of Terschelling is known to have cranberry plantations. Cattail and peat moss are two other common species in Dutch ecosystems that have been put forward as very promising species to cultivate \citep{abel2013database, van2013werk}. Also, Azolla, which is not native to the Netherlands, is mentioned as a promising species for paludiculture \citep{abel2013database, van2013werk}. These three species will be elaborated on below.
 
 % Which authors suggest cattail and peat moss?
 % Which authors mention azolla as promising?
