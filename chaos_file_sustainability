@@ -9,24 +9,34 @@ One option could be to break it up in 2 parts: sustainability of paludiculture v
 % sub question: what spatial and temporal bottlenecks and opportunities are there?
 
 \chapter{issues of sustainability}
-\section{social, economics, ecological}
+
+\section{Social, Economics and Ecological aspects}
 
 \subsection{Economic factors}
-With intensive dairy farming, per hectare, a farmer can earn ... euros. The costs are per hectare ... On average, an intensive dairy farmer receives .. euros of subsidies from the governments per hectare. Land prices are ... per hectare. At the moment, one of the most profitable paludiculture crops is peat moss, with which ... euros can be made. Costs are as high as .. No subsidies are given to paludiculture farmers. 
+% incomes of farmers versus paludiculture
+With intensive dairy farming, the net income of a farmer is 565 euro per year \citep{riet2013}. On average, an intensive dairy farmer receives 400 euros of subsidies from the governments per hectare per year \citep{riet2013}. At the moment, one of the most profitable paludiculture crops is peat moss, with which the net income is calculated as 2.650 euro per hectare per year \citep{riet2013}. However, a first investment of 23.300 euro would be needed \citep{riet2013}. No subsidies are given to paludiculture farmers. Note that land prices of agricultural lands in peatareas are between 50.000 and 60.000 euro per hectare \citep{wur}.
 
-However, if ecosystem services costs and benefits would be accounted for, paludiculture is more profitable than intensive dairy farming. \citet{born} calculated that costs of drainage in rural areas to infrastructure are ... per year. 
+% accounting for other ecosystem services
+If ecosystem services costs and benefits would be accounted for, paludiculture would be more economically viable. For example, with a functioning carbon credits system of 35 euro per ton reduced GHG emissions, a peat moss farmer could earn 466.67 euros extera per hectare per year. Moreover, \citet{born} calculated that costs of damage to buildings and infrastructure as a result of peat decline will be in total 1 billion euros till 2050, which would be ~ 30 million euros per year. If other ecosystem services which are presented below would be accounted for, benefits of paludiculture would be higher.
 
 \subsection{Ecological factors}
 % Low lying nature conservation
-In the Netherlands, a number of nature conservation areas lie in peatlands. These areas often have a higher elevation than their surroundings. That causes seepage from water away from the nature area, resulting in drougths and high costs to keep the water in. Paludiculture as buffers around nature areas are mentioned as a good alternative to prevent seepage from nature areas, and also to function as a bufferzone for aquatic fauna species such as the aquatic warbler. 
+In the Netherlands, a number of nature conservation areas lie in peatlands. These areas often have a higher elevation than their surroundings. That causes seepage from water away from the nature area, resulting in drougths and high costs to keep the water in. Paludiculture as buffers around nature areas are mentioned as a good alternative to prevent seepage from nature areas, and also to function as a bufferzone for aquatic fauna species such as the aquatic warbler \citep{riet2014}. 
 
 % Water storage after extreme weather circumstances
 Besides acting as a nature bufferzone, paludiculture areas can be used as water storage bufferzones, in case of extreme rainfall, which is expected to happen more frequently in the future. 
 
 % Nutrient filtering
-Surface waters in the Netherlands are often eutrophied due to nutrient runoff after intensive fertilizer and manure application in agricultural fields. In special, N and P are abundently available in surface waters, causing algae and other plants to bloom. As a result, waters can be deprived of oxygen, resulting in death of aquatic fauna. Paludiculture crops have shown to be able to thrive under these high nutrient conditions. Waters can be cleaned by paludiculture crops, which is already done in waste water treatment plants. Broadleaf cattail can extract upto ... kg N and ... kg P per hectare. Common reed shows similar results. 
+Surface waters in the Netherlands are often eutrophied due to nutrient runoff after intensive fertilizer and manure application in agricultural fields. In special, N and P are abundently available in surface waters, causing algae and other plants to bloom. As a result, waters can be deprived of oxygen, resulting in a (undesirable) change of aquatic fauna /citep{Waajen2014}. Paludiculture crops have shown to be able to thrive under these high nutrient conditions (see chapter \ref{chap:abiot). Waters can be cleaned by paludiculture crops, which is already done in waste water treatment plants \citep{Ciria2005;Merje2009}. Depending on the nutrient concentrations, wetland species can extract more than 300 kg N and 30 kg P per hectare per year \citep{land2016}. 
+
+% Meadow birds
+A topic that deserves special attention is the declining meadow bird populations in the Netherlands. Some of these species, such as the Godwid, has its main habitat in the Netherlands. Therefore, the Netherlands has a special opportunity to protect these species. The main reason for the decline in meadow bird populations in the last decades has been the more intensive harvest of grass on meadows in the Netherlands. However, rewetting of drained peatlands and implementing paludiculture would most probably imply even less space for meadow birds (personal note - Alex Schotman). Moreover, important meadow bird sites are often located in peat meadows, as is depicted on the map. However, note that other biodiversity such as protected sundew, aquatic warbler and orchids can be improved as a result of paludiculture.
 
 \subsection{Social and cultural aspects}
+% Cultural landscape
+Cows grazing on Dutch meadows is something that many Dutch people familiarize themselves with. Moreover, according to a partitioner at a 'veenmiddag' in the province of Noord-Holland, 'the peat meadows are a special cultural landscape with an openness that has not altered over decades \citep{dosker}. In special, the partitioners wanted to keep the typical ditch structures as it has always been. These ditch structures are known as the "Slagenlandschap". Another attendent, someone who lived in a city mentioned that it is not necessary to maintain the landscap as it is, but more to look at opportunies such as energy landscapes close to home \citep{dosker}. All in all, the attendents agree that peat loss should be stopped and that paludiculture is a welcome alternative, at least in some places \citep{Dosker}
+
+% Farmers openness
 
 
 \section{spatial and temporal factors}
