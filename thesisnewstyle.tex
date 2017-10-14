@@ -1,134 +1,3 @@
-\documentclass[a4paper,12pt]{scrbook}
-\usepackage[T1]{fontenc} % Include italic fonts
-%\usepackage{fontspec} % Compile with \XeLaTeX
-\usepackage{geometry} % Page margins
-\usepackage{titling} % Title page container
-\usepackage{wrapfig} % Picture container
-\usepackage{graphicx} % Including graphics
-\usepackage{natbib}
-\usepackage{appendix}
-\usepackage{tabularx} 
-\usepackage{tabulary}
-%\usepackage{indentfirst} 
-%\usepackage[colorlinks, allcolors=blue,xetex]{hyperref}
-\usepackage[colorlinks, allcolors=blue]{hyperref}
-\usepackage{hyperxmp} % Import license metadata
-\usepackage[acronym,toc,shortcuts,nohypertypes=acronym]{glossaries} % Acronyms
-\usepackage{tikz} % Charts
-\usepackage{subcaption} % Grid of figures
-\renewcommand{\familydefault}{\sfdefault}
-\bibliographystyle{apalike}
-\newcommand{\sur}[1]{\ensuremath{^{\textrm{#1}}}}
-\newcommand{\sous}[1]{\ensuremath{_{\textrm{#1}}}}
-\usepackage[normalem]{ulem}
-\renewcommand\textbullet{\ensuremath{\bullet}}
-
-\title{Paludiculture as a sustainable means to reduce greenhouse gas emissions from Dutch peat soils}
-\author{Merijn Slagter}
-\date{\today}
-\hypersetup{
-    pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
-    pdfcopyright={This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.},
-    pdfauthor={\theauthor}, % These are supposed to be the default but don't seem to be
-    pdftitle={\thetitle},
-    pdflang={en-GB}
-}
-
-% Flowchart blocks
-\usetikzlibrary{shadows,arrows,positioning,shapes}
-\tikzstyle{block} = [rectangle, draw, fill=white, 
-    text width=8em, text centered, rounded corners, minimum height=3em]
-\tikzstyle{line} = [draw, -latex']
-\tikzstyle{data} = [trapezium, trapezium left angle=70, trapezium right angle=110, text centered, draw,
-    text width=7em, fill=gray!30, double copy shadow, minimum height=3em]
-\tikzstyle{datasingle} = [trapezium, trapezium left angle=70, trapezium right angle=110, text centered, draw,
-    text width=8em, fill=gray!30]
-\tikzstyle{bigdata} = [trapezium, trapezium left angle=80, trapezium right angle=100, text centered, draw,
-    text width=14em, fill=gray!30, double copy shadow, minimum height=3em]
-
-% Define acronyms
-\newcommand{\underletter}[1]{\textbf{#1}} % Quick toggle of underlines
-\newacronym{WUR}{WUR}{\underletter{W}ageningen \underletter{U}niversity \& \underletter{R}esearch}
-\newacronym{NA}{NA}{\underletter{N}ot \underletter{A}vailable}
-\newacronym{QGIS}{QGIS}{\underletter{Q}uantum\underletter {G}\underletter{I}\underletter{S}}
-\newacronym{CSV}{CSV}
-{\underletter{C}omma \underletter{Se}perated \underletter{V}alue}
-\newacronym{GeoTIFF}{GeoTIFF} {\underletter{G}eospatial \underletter{T}agged \underletter{I}mage  \underletter{F}ile \underletter{F}ormat}
-\newacronym{N}{N}{\underletter{N}itrogen}
-\newacronym{P}{P}{\underletter{P}hosporous}
-\newacronym[longplural={greenhouse gasses}]{GHG}{GHG}{\underletter{g}reen\underletter{h}ouse \underletter{g}as}
-
-\geometry{top=1.25cm,bottom=0.96cm,inner=2cm,outer=1.91cm,foot=0cm,includeheadfoot} % First page margins
-
-\begin{document}
- \begin{titlingpage}
-  {\Large Environmental Systems Analysis}\vspace{0.9cm}
-  
-  {\Large Thesis Report ESA-2017-xx}\vspace{0.9cm}
-  
-  \hrule\vspace{1.1cm}
-  
-  {\bfseries \Large \MakeUppercase{\thetitle}}\vspace{2.0cm}
-  
-%  \begin{wrapfigure}{r}{0.55\textwidth}
-%    \vspace{1cm}
-%    \includegraphics[height=9.5cm,draft]{figures/wurlogo.png}
-%  \end{wrapfigure}
-%  
-  {\Large \theauthor}\vspace{5.5cm}
-  
-  \rotatebox{90}{\Large \thedate}\vspace{1.5cm}
-  
-  \sloppypar{\hspace{-2cm}\includegraphics[width=13cm]{figures/wurlogo}}
-  
-  \sloppypar{\noindent\makebox[\textwidth]{\hspace*{\dimexpr\evensidemargin-\oddsidemargin}\includegraphics[width=\paperwidth]{figures/wurlogo}}}
-  
-  \newgeometry{top=1.25cm,bottom=1.25cm,inner=1.91cm,outer=1.91cm,foot=1.19cm,includeheadfoot} % Subsequent page margins
-  \thispagestyle{empty}
-  
-  \begin{center}
-  {\bfseries \Large \thetitle}\vspace{2.7cm}
-  
-  {\Large \theauthor}\vspace{1.1cm}
-  
-  {Registration number 000000000}\vspace{3.5cm}
-  
-  {\large \underline{Supervisor}:}\vspace{1.1cm}
-  
-  {Dr Karen Fortuin}
-  
-  \vspace{3.0cm}
-  
-  {A thesis submitted in partial fulfilment of the degree of Master of Science}
-  
-  {at Wageningen University and Research Centre,}
-  
-  {The Netherlands.}\vspace{2.7cm}
-  \end{center}
-  
-  \begin{flushright}
-    {\thedate}
-  
-    {Wageningen, The Netherlands}
-  \end{flushright}\vspace{0.5cm}
-
-    Thesis code number: ESA -
-  
-    Thesis Report: ESA-2017-xx
-  
-    {Wageningen University and Research Centre}
-  
-    {Environmental Systems Analysis Chair Group}
-\end{titlingpage}
-
-\newgeometry{top=1.25cm,bottom=1.25cm,inner=1.91cm,outer=1.91cm,foot=1.19cm,includeheadfoot}
-
-\chapter*{Abstract}
-
-\textbf{Keywords:} 
-
-\tableofcontents
-
 \chapter{Introduction}
 %K Try to write a bit more towards the problem statement.
 %K The paragraph of usage in the world and the Netherlands could be together; also the paragraphs of GHG or world and NL
@@ -185,85 +54,32 @@ In deep-drained Dutch rural peat areas water levels can become lower than -40 cm
 A transition to paludiculture is not easily achieved since there are many interests regarding land use in Dutch peat meadows. For example, farmers have invested in large sheds and lands and meadow birds use the agricultural lands for breeding and foraging. Moreover, the question arises whether paludiculture can be a economic viable alternative to current dairy farming. Furthermore, it is unsure how the current water management system can be in the service of paludiculture. Currently, Dutch "Waterschappen" (Water Boards) manage water levels locally in catchment areas. All in all, it is currently unknown whether and where paludiculture is a sustainable option to reduce GHG emissions from Dutch peat soils. 
 
 \section{Goal and research questions}
-The goal of this study is to give insight in the (spatial) opportunities of paludiculture as a sustainable option to minimize GHG emissions from Dutch rural peat areas. In order to reach the goal, the following research questions and sub research questions were defined:
+The goal of this study is to give insight in the (spatial) opportunities of paludiculture as a sustainable option to minimize GHG emissions from Dutch rural peat areas. In order to reach the goal, the following main research question and sub research questions were defined:
+
+\textbf{What are (spatial) opportunities of paludiculture as a sustainable option to reduce GHG emissions caused by peat decomposition in the Netherlands?
 
 \begin{enumerate}
-\item \label{rq:pallit} {Can paludiculture help to reduce GHG emissions from Dutch peat soils?} 
-\item \label{rq:abiot} {Where are abiotic requirements of three paludiculture species met by Dutch abiotic conditions?}
-\item \label{rq:gisoptloc} {What are optimal locations to reduce GHG emissions from Dutch peat soils?}
-\begin{enumerate}
-\item \label{rqsub:peatmineral} {Where and how much peat mineralization is taking place in the Netherlands?}
-\item \label{rqsub:catchpeat} {What catchments cause the highest GHG emissions in the Netherlands?}
-\item \label{rqsub:catchheigth} {Does rewetting lower parts of catchments help to reduce peat mineralization?}
-\end{enumerate}
-\label{rq:sust}\item{Which sustainability factors need to be accounted for when implementing paludiculture in the Netherlands?}
+\item \label{rq:abiot} {What are market potentials and abiotic requirements of three paludiculture crops in the Netherlands?} 
+\item \label{rq:GHG} {How can GHG emissions caused by peat decomposition in the Netherlands be reduced by paludiculture crops?}
+\item \label{rq:sust} {Which sustainability factors need to be accounted for when implementing paludiculture in the Netherlands?}
+\item \label{rq:spatial} {What are spatial opportunities of paludiculture as a sustainable option to reduce GHG emissions caused by peat decomposition in the Netherlands?}
 \end{enumerate}
 
 %K No Titles; chapter met capital C; first conclusion, then discussion
-In chapter \ref{ch:datamethods}: \nameref{ch:datamethods} the study site, spatial data collection and analysis other means of data collection and methodology are described. Subsequently, chapter \ref{ch:litpalghg}: \nameref{ch:litpalghg} will provide a literature study about potential paludiculture crops and experimental studies regarding reduction of GHG emissions from rewetted peat soils. In the \ref{ch:abiot}\sur{th} chapter: \nameref{ch:abiot} insight will be given in abiotic requirements of three paludiculture and to what extent some of these requirements are met by Dutch conditions. Hereafter, chapter \ref{ch:optloc}: "\nameref{ch:optloc}" deals with spatial analyses about peat mineralization potential of different Dutch peat soils, what catchments contain most peat and whether partially rewetting catchments is helpful to reduce GHG emissions from peat soils. Furthermore, chapter \ref{ch:sust}: "\ref{ch:sust}" will shed light on ecological, economic, social, cultural as well as spatial and temporal aspects of paludiculture. At last, \ref{ch:condis}: \nameref{ch:condis} provides insight in the conclusions that can be derived from this study and puts the study in a broader perspective.
+%In chapter \ref{ch:datamethods}: \nameref{ch:datamethods} the study site, spatial data collection and analysis other means of data collection and methodology are described. Subsequently, chapter \ref{ch:litpalghg}: \nameref{ch:litpalghg} will provide a literature study about potential paludiculture crops and experimental studies regarding reduction of GHG emissions from rewetted peat soils. In the \ref{ch:abiot}\sur{th} chapter: \nameref{ch:abiot} insight will be given in abiotic requirements of three paludiculture and to what extent some of these requirements are met by Dutch conditions. Hereafter, chapter \ref{ch:optloc}: "\nameref{ch:optloc}" deals with spatial analyses about peat mineralization potential of different Dutch peat soils, what catchments contain most peat and whether partially rewetting catchments is helpful to reduce GHG emissions from peat soils. Furthermore, chapter \ref{ch:sust}: "\ref{ch:sust}" will shed light on ecological, economic, social, cultural as well as spatial and temporal aspects of paludiculture. At last, \ref{ch:condis}: \nameref{ch:condis} provides insight in the conclusions that can be derived from this study and puts the study in a broader perspective.
 
 \chapter{Methods} \label{ch:datamethods}
 %K Shortly note the topics of the RQs in the table
 In order to answer the research questions, literature studies, several spatial analyses and a participatory study have been performed. In Table \ref{methperrq}, the methods used for each research question is shown. 
 
-\begin{table}[htbp]
-\caption{Research methods used for answering the research questions in this study}
-\begin{center}
-\begin{tabular}{|c|c|c|c|}
-\hline
-Research question & Literature & GIS analysis & Participatory observation \\ \hline
-1 & x &  &  \\ \hline
-2 & x & x &  \\ \hline
-3a & x & x &  \\ \hline
-3b &  & x &  \\ \hline
-3c &  & x &  \\ \hline
-4 & x &  & x \\ \hline
-\end{tabular}
-\end{center}
-\label{methperrq}
-\end{table}
-
-
 \section{Study area}
 
 This study focused on rural peat soils in the Netherlands. In Figure \ref{fig:peatinnl}, a map can be found displaying all Dutch peat areas.
-%K How did you get the map, what is the source?
-
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.4]					
-   	{figures/methods/peatinnl} 
-    \caption{Peat soil in the Netherlands}
-    \label{fig:peatinnl}
-\end{figure}
 
 \section{Data}
 \subsection{Spatial data}
 \subsubsection{Data availability}
 For this study, some spatial data was open source and obtained freely from the web. Other spatial data was provided for by Dutch Waterschappen and Wageningen Environmental Research. Table \ref{tab:spatialdatasources} shows the sources and years of creation of the spatial data I used. 
-
-%K Add link to websites
-\begin{table}[htbp]
-\caption{Sources of spatial data used in this study}
-\begin{center}
-\begin{tabular}{|p{7cm}|p{7cm}|}
-\hline
-\textbf{Spatial data} & \textbf{Source} \\ \hline
-Catchment borders waterschap Amstel, Gooi en Vecht & Waternet  \\ \hline
-Catchment borders waterschap Rijnland & Rijnland GIS team \\ \hline
-Catchment borders waterschap Fryslan & Fryslan GIS team \\ \hline
-Catchment borders Hoogheemraadschap De Stichtse Rijnlanden & Hoogheemraadschap De Stichtse Rijnlanden GIS department \\ \hline
-Catchment borders waterschap Rivierenland & GIS team waterschap Rivierenland \\ \hline
-Soil map & Wageningen Environmental Research \\ \hline
-Provinces, country borders & Open free GADM \\ \hline
-Waterschap borders & Open free \\ \hline
-AHN & Open free AHN platform \\ \hline
-Water quality & Open free informatiehuis water \\ \hline
-Land use LGN 2012 & Wageningen Environmental Research \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:spatialdatasources}
-\end{table}
 
 \subsubsection{Spatial data processing mechanisms}
 The open source programming language R and the open source programs \ac{QGIS} and RKWard were used for data processing and visualization. RKWard makes use of R and was in this thesis used for all the spatial data processing. \ac{QGIS} was used to derive the visualization products.
@@ -286,22 +102,6 @@ Table \ref{tab:procdataprep} lists the preparation procedure of the different so
 
 %K Make a story instead of a table to explain te proces
 
-\begin{table}[htbp]
-\caption{Data preparation procedure}
-\begin{center}
-\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
-\hline
-\textbf{File from source} & \textbf{Procedure} & \textbf{Source file thesis} \\ \hline
-Soil map the Netherlands & From the soil map, keep only peat soils & so\_peat\_soil\_nl \\ \hline
-Land use map the Netherlands 2012 & From the land use map, only keep agricultural fields & so\_agricultural\_lands\_nl \\ \hline
-Provinces GADM & Remove Ijsselmeer & so\_provinces\_borders \\ \hline
-Netherlands GADM &  & so\_nl\_borders \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:procdataprep}
-\end{table}
-
-
 \subsection{Peat mineralization indices}
 % Stouthamer indices
 As part of the answer to research question \ref{rqsub:peatmineral} information on peat mineralization potential per peat type was needed. In order to obtain this information for the province of Utrecht, \citet{stouthamer2008toelichting} caculated mineralization potential indices for 28 peat types. An overview of these indices can be found in Annex \ref{ann:peatindicesstout}. These indices were created based on a four criteria: (1) soil type of the layers, (2) depth of the layers, (3) organic matter content in the layers and (4) profile type of the layers. A detailed description can be found in \citep{stouthamer2008toelichting}. In this study, more indices were calculated, as is explained in section \ref{sec:mineralpotmet}.
@@ -312,22 +112,6 @@ As part of the answer to research question \ref{rqsub:peatmineral} information o
 Research question \ref{rq:abiot} deals with abiotic requirements and Dutch abiotic conditions. 
 In order to get an understanding of the abiotic situation in the Netherlands regarding paludiculture plants, measurements of pH, \ac{N} and \ac{P} that were done in Dutch peat areas in 2013 were summarized. As a result, suitable locations for three paludiculture species could be depicted. In Table \ref{tab:workflowabiotic}, a workflow is provided. In Annex \ref{ann:procedureabiotics}, a more detailed approach is provided, as well as the r scripts I used to get the analysis done.
 
-\begin{table}[htbp]
-\caption{Workflow finding abiotic Dutch conditions and suitable locations for three paludiculture species}
-\begin{center}
-\begin{tabular}{|p{3cm}|p{10cm}|}
-\hline
-\multicolumn{1}{|l|}{\textbf{Step}} & \textbf{Description} \\ \hline
-0 & Prepare shapefiles with pH, N \& P measurement locations in the Netherlands \\ \hline
-1 & Find measurement locations that lie within peat areas \\ \hline
-2 & Find locations that meet requirements of paludiculture species \\ \hline
-3 & Visualize suitable locations per province \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:workflowabiotic}
-\end{table}
-
-
 \subsection{Peat mineralization reduction potential in the Netherlands}
 
 \subsubsection{Mineralization potential indices of peat soils in the Netherlands} \label{sec:mineralpotmet}
@@ -335,86 +119,15 @@ In order to get an understanding of the abiotic situation in the Netherlands reg
 %Deriving mineralization potentials
 \citet{stouthamer2008toelichting} calculated potentials for 28 peat types. In the Netherlands, 62 peat types can be found. I used two approaches to update the mineralization potentials to the residing peat types. First of all, based on the already existing mineralization potentials, I could extrapolate the indices to 20 other indices. However, for 14 peat types, this could not be done. Therefore, for these peat types, indices were created from scratch, using the method used by \citet{stouthamer2008toelichting}. In Table \ref{tab:workflowminerpot}, an overview of the workflow to derive mineralization potentials is shown. In Annex \ref{ann:peatmineralpot}, a description of this method is showed. Finally, for .. of the .. peat types, indices were found, as listed in Annex .. 
 
-\begin{table}[htbp]
-\caption{Workflow derivation of mineralization potentials in Dutch peat soils}
-\begin{center}
-\begin{tabular}{|p{3cm}|p{10cm}|}
-\hline
-\multicolumn{1}{|l|}{\textbf{Step}} & \textbf{Description} \\ \hline
-0 & Data preparation \\ \hline
-1 & Determine mineralization potentials of peat types \\ \hline
-2 & Classify peat types into four categories of mineralization potential \\ \hline
-3 & Find peat soils in agricultural lands  \\ \hline
-4 & Add mineralization category info to peat soil map \\ \hline
-5 & Calculate sizes of areas, in total and per province \\ \hline
-6 & Visualize data \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:workflowminerpot}
-\end{table}
-
-
 %Categorize indices
 In order to summarize the mineralization potentials, the indices were categorized in four groups of mineralization potential: Very low, Low, High and Very high. Table \ref{tab:minpotcatranges} shows the ranges on which these categories are based. Subsequently, the areas of these categories per province and for the Netherlands were calculated. Annex \ref{ann:indicesused} shows the exact procedure that was followed to do the analysis.
-
-\begin{table}[htbp]
-\caption{Ranges of mineralization potential categories}
-\begin{center}
-\begin{tabular}{|l|l|}
-\hline
-Category \& Range \\ \hline
-Very high \& 75 – 100 \\% \\ \hline
-High \& 50 – 75 \\% \\ \hline
-Low \& 25 – 50 \\% \\ \hline
-Very low \& 0 – 25 \\% \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:minpotcatranges}
-\end{table}
-
-
-
 \subsubsection{Catchments that cause the heighest GHG emissions}
 
 %Workflow to determine catchments that can be used to be completely rewetted
 To answer Research question \ref{rqsub:catchpeat}, first of all, the catchments that contain peat soil were determined. Secondly, the proportion of peat soil in each catchment was calculated. The proportion was subsequently categorized into four levels of peat presence: Very low, Low, High and Very High. An overview of the performed steps is depicted in Table \ref{tab:workflowwholecatch}. A more detailed description can be found in Annex \ref{ann:workflowwholecatch}, as well as the r scripts that were used to perform this analysis.
 
-\begin{table}[htbp]
-\caption{Workflow finding catchment with highest GHG mitigation potentials}
-\begin{center}
-\begin{tabular}{|p{3cm}|p{7cm}|}
-\hline
-\multicolumn{1}{|l|}{\textbf{Step}} & \textbf{Description} \\ \hline
-0 & Data preparation \\ \hline
-1 & Find catchment that lie within peat \\ \hline
-2 & Find proportion of peaty part of catchment \\ \hline
-3 & Calculate areas of peaty/non peat part \\ \hline
-4 & Visualize \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:workflowwholecatch}
-\end{table}
-
 \subsubsection{Elevation differences within catchments}
 Research question \ref{rqsub:catchheigth} addresses the question: "Does rewetting lower parts of a catchment help to reduce peat mineralization?". In order to answer this question, the elevation difference between the peat part and the non peat part of eight catchments was determined. These catchments were selected because for the analysis of these catchments, less data was needed). An overview of the procedure can be found in Table \ref{tab:workflowpartcatch}. Annex \ref{ann:workflowpartcatch} shows the detailed process as well as the r scripts that were used to do the analysis.
-
-\begin{table}[htbp]
-\caption{Workflow determing height differences between peat part and non peat part of catchments}
-\begin{center}
-\begin{tabular}{|p{3cm}|p{7cm}|}
-\hline
-\multicolumn{1}{|l|}{\textbf{Step}} & \textbf{Description} \\ \hline
-0 & Data preparation \\ \hline
-1 & Find elevation data for selected catchments \\ \hline
-2 & Crop and mask elevation rasters \\ \hline
-3 & Split rasters for peat versus non peat part \\ \hline
-4 & Calculate averages of peat versus non peat part \\ \hline
-5 & Visualize \\ \hline
-\end{tabular}
-\end{center}
-\label{tab:workflowpartcatch}
-\end{table}
-
 
 \subsection{Sustainability issues}
 
@@ -429,13 +142,12 @@ In total, three theme sessions around the topic of peat decline and paludicultur
 
 %Based on participatory observation at a number of conferences, theme days and knowledge expeditions that were performed for this thesis, a few key issues were collected that reflect the current system's inability to start with the transition to paludiculture. 
 
-\chapter{Potential GHG emission reductions by paludiculture crops} \label{ch:litpalghg}
+\chapter{Promising paludiculture crops} \label{ch:abiotmarket}
 
 This chapter addresses research question \ref{rq:pallit}" As a first step, the concept of paludiculture will be explained and various promising species will be described. Then, a literature study will be presented about the greenhouse gas balance of rewetted and paludiculture plots compared to drained peat soils.
 
-\section{Promising species of paludiculture}
+\section{The concept of paludiculture}
 
-\subsection{The concept of paludiculture}
 %Paludiculture definition
 Paludiculture stems from the Latin word Palus, which means swamp. The term paludiculture was coined in 2007 and basically describes the productive usage of wetlands while reducing greenhouse gas emissions from peat areas \citep{wichtmann2007paludiculture}. 
 
@@ -448,15 +160,9 @@ Currently, some paludiculture practices already exist in the Netherlands. At lea
 % Maybe add the description of species in boxes or annex?
 These three species will be elaborated on below.
 
-\subsection{Cattail}
+\section{Market potential of three promising paludiculture crops in the Netherlands}
 
-%Find own cattail picture
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.2]{figures/cattailsmall} 
-    \caption{Cattail, \textit{Typha}}
-    \label{fig:cattail}
-\end{figure}
+\subsection{Cattail}
 
 % Determine whether to use latin names or English names.
 
@@ -469,45 +175,7 @@ Experiments with cattail are taking place in Germany since the '00s, and have re
 %Usage of cattail
 Cattail species have a history of usage everywhere around the world \citep{morton1975cattails}. \citet{morton1975cattails} notes that cattail in the Europe was used to stuff chairs and make winter protection for crops. Although cattail is hardly used nowadays, interest in cattail as a paludiculture crop is growing. Various authors have suggested cattail as a promising species \citep{morton1975cattails, heinz2011population}. They mention cattail promising, not only for its robustness, but also for its potential uses. Cattail has many purposes, which are listed in Table \ref{tab:typha}. The most promising usage is as isolation material. Due to its fire-resistant properties, it is a fire-proof alternative for isolation. It can be made into isolation boards or as a wall-filler. 
 
-% Include Morton (1975)
-
-\begin{table}
-\centering
-\caption{Possible usage of Typha}
-\begin{tabular}{|c|c|}
-\hline 
-\textbf{Usage} & \textbf{Part} \\ 
-\hline 
-Isolation & Whole \\ 
-\hline 
-Bio-laminate & Whole \\ 
-\hline 
-Fodder & Whole \\ 
-\hline 
-Material for handworking & Stem \\ 
-\hline 
-Human Food & Shoots, Rhizomes and Cobs \\ 
-\hline 
-Animal Fodder & Shoots, Rhizomes and Cobs \\ 
-\hline 
-Flour & Flower \\ 
-\hline 
-Medicinal tea & Flower \\ 
-\hline 
-Organic pest control of mites & Flower \\ 
-\hline 
-\end{tabular} 
-\label{tab:typha}
-\end{table}
-
 \subsubsection{Peat moss}
-
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.5]{figures/peatmosssmall} 
-    \caption{Peat moss, \textit{Sphagnum}}
-    \label{fig:peatmoss}
-\end{figure}
 
 % peat moss in the Netherlands
 Another plant that is put forward as promising is \textit{Sphagnum} or peat moss (see Figure \ref{fig:peatmoss}). Peat moss is a native species to the Netherlands that once dominated peat bogs in the Netherlands. The water supply in its natural condition comes solely from rain water. Experiments with peat moss started already in the 2001 in Germany \citep{gaudig2014sphagnum}. In 2013, a pilot project was started in 'Het Ilperveld', near Amsterdam \citep{van2013werk}. 
@@ -520,90 +188,10 @@ According to \citet{gaudig2014sphagnum} and \citet{wichtmann2016paludiculture}, 
 
 \subsection{Azolla}
 
-\begin{figure}
-    \centering
-    \begin{subfigure}[a]{0.3\textwidth}
-    	\includegraphics[scale=0.2]{figures/azollasmall} 
-    	\caption{ \textit{Azolla} fern}
-    	\label{fig:azollasmall}
-    \end{subfigure}	
-    \quad
-    \begin{subfigure}[a]{0.3\textwidth}
-    	\includegraphics[scale=0.11]{figures/azollafield} 
-    	\caption{ \textit{Azolla} field}
-    	\label{fig:azollafield}
-    \end{subfigure}	
-    \caption{ \textit{Azolla} \citep{wagner1997azolla}}
-    \label{fig:azolla}
-\end{figure}
-
 % Azolla introduction
 Another species that is put forward as interesting is \textit{Azolla}, a fast growing surface water plant very rich in proteins. The plant forms a symbiosis with \textit{Anabaena azollae}, a bacteria that fixes nitrogen from the air \citep{wagner1997azolla}. \textit{Azolla} is therefore never limited by nitrogen. \textit{Azolla} is not native in The Netherlands, but currently widely common in Dutch waters. \textit{Azolla} can be harvested for various purposes. Since a long time, \textit{Azolla} is used in Asian countries as green manure in rice paddies \citep{wagner1997azolla}. A promising use for the Netherlands is therefore also to use it as fertilizer. Potential purposes are mentioned by \citet{wagner1997azolla} and listed in Table \ref{tab:azolla}.
 
-\begin{table}
-\centering
-\caption{Potential uses of \textit{Azolla}}
-\begin{tabular}{|c|}
-\hline 
-\textbf{Potential Use} \\ 
-\hline 
-Fodder for animals \\ 
-\hline 
-Human consumption \\ 
-\hline 
-Medicines \\ 
-\hline 
-Production of biogas \\ 
-\hline 
-Production of hydrogen \\ 
-\hline 
-Water purifier \\ 
-\hline 
-Control of weeds \\ 
-\hline 
-\end{tabular} 
-\label{tab:azolla}
-\end{table}
-
-\section{Greenhouse gas emission reduction by rewetting and paludiculture practices}
-
-\subsection{Effect of rewetting peatlands on peat oxidation}
-
-% impact of rewetted peatland on GHG emissions
-\citet{van2013rewetting} studied the effect of a rewetted peatland on net GHG emissions expressed in CO\sous{2} equivalents. The study showed that CO\sous{2} emissions decreased drastically and CH\sous{4} emissions increased. However, the net effect of rewetting the peatland with water table of 4 cm above the ground on emissions of CO\sous{2} equivalents was positive with approximately 1.0 kg m\sur{-2} less CO\sous{2} equivalents. Still, GHG emissions in terms of CO\sous{2} were as high as 2.0 - 3.0 kg m\sur{-2} in the rewetted condition. An experiment with top soil removal in the Netherlands, showed a reduction of 99\% in methane emissions when rewetting the peatland \citep{harpenslager2015rewetting}. The results shows the potential of topsoil removal prior to rewetting for reducing GHG emissions. 
-%K Explain why is this
-
-\subsection{Potential of paludiculture crops to conserve peat}
-% peat moss carbon balances
-In Germany, carbon balances of establishing peat moss plots were made \citep{gunther2017greenhouse}. The authors found that methane emissions declined significantly over the study time of two years. The production strips of the peat moss  species were found to be net GHG sinks of 5 to 9 ton ha\sur{-1} a\sur{-1} (in CO\sous{2} equivalents). However, ditches were net carbon sources with release of about 11 ton ha\sur{-1} a\sur{-1} CO\sous{2} equivalents. Still, peat moss farming on bogs were found to be less emitting compared to low-intensity dairy farming. Moreover, the authors note that with peat moss farming, an alternative is provided for mineralisation of pristine peat areas for horticulture substrates.
-%K explain more 
- 
-% cattail carbon balances
-It is known that plants possessing aerenchuma such as cattail, are methane emitters \citep{wichtmann2016paludiculture}. A study on broadleaf cattail showed that the GHG balance after the first year of implementation was already close to climate neutral \citep{guntherghgtypha}. In the study, the authors compared a plot with harvest with a plot without harvest. Harvesting the cattail proved to reduce net GHG emissions slightly. \citet{wichtmann2016paludiculture} note that 'renewed biomass growth after cutting supports net carbon sequestration contributing to a decrease in GHG emissions'. 
-
-No studies have analyzed the effect of Azolla farming on the GHG balance. 
-
-\chapter{Abiotic requirements of implementing paludiculture in the Netherlands} \label{ch:abiot}
-
-\section{Abiotic requirements of three paludiculture species}
-
-This chapter addresses research question \ref{rq:abiot}. First of all, the abiotic requirements of three paludiculture crops will be discussed, mostly focusing on pH, \ac{P}, \ac{N} and water level requirements. An overview of these requirements can be found in Table \ref{tab:phy}.
-
-\begin{table}[htbp]
-\caption{Abiotic Requirements of broadleaf cattail, peat moss and Azolla}
-\begin{flushleft}
-\begin{tabular}{|r|l|l|l|l|}
-\hline
-\multicolumn{1}{|l|}{} & \textbf{Factor} & \textbf{Cattail} & \textbf{Peat moss} & \textbf{Azolla} \\ \hline
-1 & \textit{N presence} &  Higher is better & Higher is better & Does not matter \\ \hline
-2 & \textit{P presence} & Higher is better & Higher is better & Higher is better \\ \hline
-3 & \textit{pH} & 4-8 & 3.0 to 7.0 & 4.5 to 7.5 \\ \hline
-4 & \textit{Water level} & 0 to +60 cm & -10 to 0 cm & + 5 cm \\ \hline
-\end{tabular}
-\end{flushleft}
-\label{tab:phy}
-\end{table}
-
+\section{Abiotic requirements of three promising paludiculture crops in the Netherlands}
 
 \subsection{Cattail}
 
@@ -634,7 +222,6 @@ In contrary to cattail, peat moss is a vulnerable species. Physical conditions s
 % Note why that is important
 N input was noted as ~ 30 kg per hectare per year and P was noted as between 1 and 3 kg per hectare per year.  The authors furthermore note that high nutrients can cause competitor vascular plant weeds such as \textit{Juncus effusus} or algae to grow. However, in this study these plants were removed, which proved useful for the peat moss to grow. \citep{wichtmann2016paludiculture} note that peat mosses in natural bogs grows best with low nutrient contents.
 
-
 \citet{Temmink2017196} note that pH should be kept low, which can be done by making sure bicarbonate concentrations in waters are low enough. In the experiment, ditch water pH concentrations were between 4.8 and 6.0. Also, in other studies it is mentioned that peat moss grows best in acidic conditions \citep{wichtmann2016paludiculture}. Also, \citet{gaudig2005growing} found that peat moss performed significantly better at a pH of 3.2 compared to 4.5 and 8.0. 
 
 \citet{fritz2014paludicultuur} note that it would be better to remove the top layer of a previously used agricultural peatland, so the trophic conditions are better accustomed to peat moss growth. That this procedure is ideal for peat moss growth was also mentioned by \citet{Temmink2017196}.
@@ -647,6 +234,61 @@ N input was noted as ~ 30 kg per hectare per year and P was noted as between 1 a
 \citet{lumpkin1980azolla} note that the most common nutrient limiting Azolla growth is P. The authors note that in Denmark, Azolla was found to thrive with a P concentration of 1.1 mg P/liter. Also, Iron (Fe) can become limiting, but in general 1 ppm iron is  sufficient for Azolla growth. However, the authors note that iron deficiency might stem from a high pH, that is because iron can then be precipitated. They acknowledge, that the more P is put into the water, the more N can be fixated. \citet{sabetraftar2013review} note that Azolla is known to not be affected by high N presence. In laboratory experiments, P concentrations of 0.06 ppm is sufficient, in field studies, they found P requirements of 0.3 - 1 ppm. Azolla plants can survive in salt concentrations between 160-380 mg/l  \citep{lumpkin1980azolla}. However, it was studied that high salinity can inhibit growth \citep{sabetraftar2013review, lumpkin1980azolla}. 
 
 The optimum pH range is from 4.0 - 4.5, but Azolla can also survive in water with a pH from 3.5 - 10.0. However, vulnerability to pH is much affected by other factors. For instance, with high light intensity, optimal pH is 9-10 but with low light intensity, optimum pH is 6.0 at a temperature of 20 degrees \citep{wagner1997azolla}. Optimal pH levels according to \citet{lumpkin1980azolla} are in a range from 4.5 - 7.0. \citet{sabetraftar2013review} note that, in general, a pH between 4.5 and 7.5 is sufficient.
+
+
+\chapter{GHG reductions by paludiculture}
+
+\section{Aerobic and anaerobic peat decomposition in the Netherlands}
+
+\section{Effect of peat characteristics on the rate of peat decomposition in the Netherlands}
+
+\section{Water management options to reduce peat decomposition in the Netherlands}
+
+
+\chapter{Sustainability issues}
+
+\section{Additional functions of paludiculture}
+
+\section{Bottlenecks with paludiculture}
+
+\section{Temporal issues regarding paludiculture}
+
+
+\chapter{Spatial opportunities of paludiculture}
+
+\section{Spatial distribution of optimal locations in the Netherlands to reduce GHG emissions caused by peat decomposition}
+
+\section{Spatial opportunities regarding usage of elevation differences in catchments to reduce GHG emissions caused by peat decomposition in the Netherlands}
+
+\section{Spatial co-functions and bottlenecks regarding paludiculture in the Netherlands}
+
+
+
+
+
+\section{Greenhouse gas emission reduction by rewetting and paludiculture practices}
+
+\subsection{Effect of rewetting peatlands on peat oxidation}
+
+% impact of rewetted peatland on GHG emissions
+\citet{van2013rewetting} studied the effect of a rewetted peatland on net GHG emissions expressed in CO\sous{2} equivalents. The study showed that CO\sous{2} emissions decreased drastically and CH\sous{4} emissions increased. However, the net effect of rewetting the peatland with water table of 4 cm above the ground on emissions of CO\sous{2} equivalents was positive with approximately 1.0 kg m\sur{-2} less CO\sous{2} equivalents. Still, GHG emissions in terms of CO\sous{2} were as high as 2.0 - 3.0 kg m\sur{-2} in the rewetted condition. An experiment with top soil removal in the Netherlands, showed a reduction of 99\% in methane emissions when rewetting the peatland \citep{harpenslager2015rewetting}. The results shows the potential of topsoil removal prior to rewetting for reducing GHG emissions. 
+%K Explain why is this
+
+\subsection{Potential of paludiculture crops to conserve peat}
+% peat moss carbon balances
+In Germany, carbon balances of establishing peat moss plots were made \citep{gunther2017greenhouse}. The authors found that methane emissions declined significantly over the study time of two years. The production strips of the peat moss  species were found to be net GHG sinks of 5 to 9 ton ha\sur{-1} a\sur{-1} (in CO\sous{2} equivalents). However, ditches were net carbon sources with release of about 11 ton ha\sur{-1} a\sur{-1} CO\sous{2} equivalents. Still, peat moss farming on bogs were found to be less emitting compared to low-intensity dairy farming. Moreover, the authors note that with peat moss farming, an alternative is provided for mineralisation of pristine peat areas for horticulture substrates.
+%K explain more 
+ 
+% cattail carbon balances
+It is known that plants possessing aerenchuma such as cattail, are methane emitters \citep{wichtmann2016paludiculture}. A study on broadleaf cattail showed that the GHG balance after the first year of implementation was already close to climate neutral \citep{guntherghgtypha}. In the study, the authors compared a plot with harvest with a plot without harvest. Harvesting the cattail proved to reduce net GHG emissions slightly. \citet{wichtmann2016paludiculture} note that 'renewed biomass growth after cutting supports net carbon sequestration contributing to a decrease in GHG emissions'. 
+
+No studies have analyzed the effect of Azolla farming on the GHG balance. 
+
+\chapter{Abiotic requirements of implementing paludiculture in the Netherlands} \label{ch:abiot}
+
+\section{Abiotic requirements of three paludiculture species}
+
+This chapter addresses research question \ref{rq:abiot}. First of all, the abiotic requirements of three paludiculture crops will be discussed, mostly focusing on pH, \ac{P}, \ac{N} and water level requirements. An overview of these requirements can be found in Table \ref{tab:phy}.
 
 
 %According to Tim Pelsma, a researcher at Waternet Amsterdam, Azolla plants need a lot of phosphorous, more than can be provided by Dutch water systems. Therefore, extra P fertilization is necessary for Azolla growth (interview...).
